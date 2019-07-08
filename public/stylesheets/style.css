@@ -1,0 +1,38 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+
+a {
+  color: #00B7FF; }
+
+/*# sourceMappingURL=style.css.map */
+
+.nav-bar {
+  background-color:rgb(25, 33, 41);
+  color:white;
+  padding:14px 0px 14px 0px;
+  height:40px;
+
+}
+
+
+.homepart{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  padding: 50vh;
+}
+
+
+.nav-list{
+
+  display:flex;
+  flex-direction:row;
+  justify-content: left;
+}
+li{
+  padding-left:20px;
+  list-style-type:none;
+  color:white;
+}
