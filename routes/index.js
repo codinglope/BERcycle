@@ -20,6 +20,18 @@ router.post('/map', (req, res, next) => {
   })
     .then(data => { res.redirect('/') })
     .catch(err => { console.log(err) })
-})
+});
+
+const loginCheck = () => {
+  return (req, res, next) => {
+    if (req.isAuthenticated()) next();
+    else res.redirect("/login");
+  };
+};
+
+router.get("/secret", loginCheck(), (req, res) => {
+  console.log("secret: ", req.session);
+  res.render("secret");
+});
 
 module.exports = router;

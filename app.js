@@ -79,7 +79,7 @@ passport.use(
   })
 );
 
-passport.use(
+/* passport.use(
   new GitHubStrategy(
     {
       clientID: process.env.GITHUB_CLIENT_ID,
@@ -100,7 +100,7 @@ passport.use(
         });
     }
   )
-);
+); */
 
 app.use(passport.initialize());
 app.use(passport.session());
