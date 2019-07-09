@@ -20,24 +20,44 @@ center: [13.375739, 52.509352],
 </script>
 
 
-</div>
-
+{{!-- </div>
+<p>
+  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Link with href
+  </a>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Button with data-target
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+  </div>
+</div> --}}
 
 
 
 <div class="edupoints">
-<form action="/map" method="POST">
-  <label for="name">name:</label>
-  <input type="text" name="name">
-  <label for="imageUrl">image-url:</label>
-  <input type="text" name="imageUrl">
-  <label for="latitude">latitude:</label>
-  <input type="number" step="0.0001" name="latitude">
-  <label for="longitude">longitude:</label>
-  <input type="number" step="0.0001" name="longitude">
-  
-   <button  class="btn btn-danger" type="submit" method="get"> Add Edu.Point</button>
+  <button class="btn btn-danger" onclick="$('.edupoints').toggleClass('active');">
+    &#9776;
+  </button>
+  <form action="/map" method="POST">
+    <label for="name">name:</label>
+    <input type="text" name="name">
+    <label for="imageUrl">image-url:</label>
+    <input type="text" name="imageUrl">
+    <label for="latitude">latitude:</label>
+    <input type="number" step="0.0001" name="latitude">
+    <label for="longitude">longitude:</label>
+    <input type="number" step="0.0001" name="longitude">
+     <div class="redbutton">
+    <button  class="btn btn-success" type="submit" method="get"> Add Edu.Point</button>
+    </div>
+  </form>
    
-</form>
+</div> 
+
+
  
-</div>
+
+

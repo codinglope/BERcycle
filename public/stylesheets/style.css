@@ -73,10 +73,25 @@ a {
   color:white;
 }
 
-.edupoints{
-
-
+.edupoints {
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  z-index: 5;
+  top: 100px;
+  left: 25px;
+  overflow: hidden;
+  transition: 400ms;
+  border-radius: 10px;
 }
+
+  .edupoints.active {
+    width: 200px;
+    height: 500px;
+    background-color: white;
+    padding: 10px;
+  }
 
 .access{
   display: flex;
@@ -100,4 +115,8 @@ a {
 font-style: oblique;
 color:darkblue;
 
+}
+
+.redbutton{
+  padding:5vh;
 }
