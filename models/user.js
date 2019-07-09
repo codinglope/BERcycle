@@ -3,9 +3,19 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const userSchema = new Schema({
-  name: String,
-  email: String,
-  password: String,
+  name:String,
+  username: {
+    type:String,
+    unique:true
+  },
+  
+email: String,
+  password: {
+    type: String
+    // required: true
+  },
+  githubId: String,
+  facebookId: String
 },
 {
   timestamps: {

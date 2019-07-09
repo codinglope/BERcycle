@@ -8,6 +8,13 @@ const hbs          = require('hbs');
 const mongoose     = require('mongoose');
 const logger       = require('morgan');
 const path         = require('path');
+const session = require("express-session");
+const passport = require("passport");
+const LocalStrategy = require("passport-local").Strategy;
+const GitHubStrategy = require("passport-github").Strategy;
+const bcrypt = require("bcrypt");
+const User = require("./models/User");
+const flash = require("connect-flash");
 
 
 mongoose
@@ -30,7 +37,90 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-// Express View engine setup
+// Express View engine setup....................................................
+
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    cookie: { maxAge: 24 * 60 * 60 },
+    resave: false,
+    saveUninitialized: false
+  })
+);
+
+app.use(flash());
+
+passport.serializeUser((user, done) => {
+  done(null, user._id);
+});
+
+passport.deserializeUser((id, done) => {
+  User.findById(id)
+    .then(user => {
+      done(null, user);
+    })
+    .catch(err => {
+      done(err);
+    });
+});
+
+passport.use(
+  new LocalStrategy((username, password, done) => {
+    User.findOne({ username: username })
+      .then(user => {
+        if (!user || !bcrypt.compareSync(password, user.password)) {
+          return done(null, false, { message: "Invalid credentials" });
+        }
+        done(null, user);
+      })
+      .catch(err => {
+        done(err);
+      });
+  })
+);
+
+passport.use(
+  new GitHubStrategy(
+    {
+      clientID: process.env.GITHUB_CLIENT_ID,
+      clientSecret: process.env.GITHUB_CLIENT_SECRET,
+      callbackURL: "http://localhost:7700/auth/github/callback"
+    },
+    (accessToken, refreshToken, profile, done) => {
+      User.findOne({ githubId: profile.id })
+        .then(user => {
+          if (user) return done(null, user);
+
+          return User.create({ githubId: profile.id }).then(newUser => {
+            return done(null, newUser);
+          });
+        })
+        .catch(err => {
+          done(err);
+        });
+    }
+  )
+);
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 app.use(require('node-sass-middleware')({
   src:  path.join(__dirname, 'public'),
@@ -54,5 +144,6 @@ app.locals.title = 'BERcycle';
 const index = require('./routes/index');
 app.use('/', index);
 
+app.use("/", require("./routes/auth"));
 
 module.exports = app;

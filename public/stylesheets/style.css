@@ -1,5 +1,5 @@
 body {
-  padding: 50px;
+  padding: auto;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
 
 a {
@@ -10,8 +10,13 @@ a {
 .nav-bar {
   background-color:rgb(25, 33, 41);
   color:white;
-  padding:14px 0px 14px 0px;
+  padding:auto;
   height:40px;
+  width:100vw;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  
 
 }
 
@@ -35,4 +40,16 @@ li{
   padding-left:20px;
   list-style-type:none;
   color:white;
+}
+
+.container-fluid {
+  display:flex;
+  justify-content: left;
+  align-items: center;
+}
+
+
+a {
+  text-decoration: none;
+  
 }
