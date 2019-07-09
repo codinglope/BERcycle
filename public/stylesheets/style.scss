@@ -1,8 +1,122 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+  padding: auto;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
 
 a {
-  color: #00B7FF;
+  color: #00B7FF; }
+
+/*# sourceMappingURL=style.css.map */
+
+.nav-bar {
+  background-color:rgb(25, 33, 41);
+  color:white;
+  padding:auto;
+  height:40px;
+  width:100vw;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  
+
+}
+
+
+.homepart{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  padding: 50vh;
+}
+
+
+.nav-list{
+
+  display:flex;
+  flex-direction:row;
+  justify-content: left;
+}
+.li{
+  padding-left:20px;
+  list-style-type:none;
+  color:white;
+}
+
+.container-fluid {
+  display:flex;
+  justify-content: left;
+  align-items: center;
+}
+
+
+a {
+  text-decoration: none;
+  
+}.nav-list2{
+
+  display:flex;
+  flex-direction:row;
+  justify-content: right;
+}
+
+.container-fluid2 {
+  display:flex;
+  justify-content: right;
+  align-items: center;
+  flex-direction:row;
+}
+
+
+.right {
+  padding-right:20px;
+  list-style-type:none;
+  color:white;
+}
+
+.edupoints {
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  z-index: 5;
+  top: 100px;
+  left: 25px;
+  overflow: hidden;
+  transition: 400ms;
+  border-radius: 10px;
+}
+
+  .edupoints.active {
+    width: 200px;
+    height: 500px;
+    background-color: white;
+    padding: 10px;
+  }
+
+.access{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  padding: 25vh;
+  text-decoration-color: blue;
+  font-weight:bold;
+  font-size: 15px;
+  
+}
+
+.signupbutton {
+  padding:5vh;
+  flex-direction: column;
+}
+
+
+.signupdeco{
+font-style: oblique;
+color:darkblue;
+
+}
+
+.redbutton{
+  padding:5vh;
 }

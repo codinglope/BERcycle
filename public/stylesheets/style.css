@@ -6,72 +6,56 @@ a {
   color: #00B7FF; }
 
 /*# sourceMappingURL=style.css.map */
-
 .nav-bar {
-  background-color:rgb(25, 33, 41);
-  color:white;
-  padding:auto;
-  height:40px;
-  width:100vw;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  
-
-}
-
-
-.homepart{
+  background-color: #192129;
+  color: white;
+  padding: auto;
+  height: 40px;
+  width: 100vw;
   display: flex;
-  flex-direction:column;
+  justify-content: center;
+  align-items: center; }
+
+.homepart {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50vh;
-}
+  padding: 50vh; }
 
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: left; }
 
-.nav-list{
-
-  display:flex;
-  flex-direction:row;
-  justify-content: left;
-}
-.li{
-  padding-left:20px;
-  list-style-type:none;
-  color:white;
-}
+.li {
+  padding-left: 20px;
+  list-style-type: none;
+  color: white; }
 
 .container-fluid {
-  display:flex;
+  display: flex;
   justify-content: left;
-  align-items: center;
-}
-
+  align-items: center; }
 
 a {
-  text-decoration: none;
-  
-}.nav-list2{
+  text-decoration: none; }
 
-  display:flex;
-  flex-direction:row;
-  justify-content: right;
-}
+.nav-list2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: right; }
 
 .container-fluid2 {
-  display:flex;
+  display: flex;
   justify-content: right;
   align-items: center;
-  flex-direction:row;
-}
-
+  flex-direction: row; }
 
 .right {
-  padding-right:20px;
-  list-style-type:none;
-  color:white;
-}
+  padding-right: 20px;
+  list-style-type: none;
+  color: white; }
 
 .edupoints {
   display: block;
@@ -83,40 +67,33 @@ a {
   left: 25px;
   overflow: hidden;
   transition: 400ms;
-  border-radius: 10px;
-}
+  border-radius: 10px; }
 
-  .edupoints.active {
-    width: 200px;
-    height: 500px;
-    background-color: white;
-    padding: 10px;
-  }
+.edupoints.active {
+  width: 200px;
+  height: 500px;
+  background-color: white;
+  padding: 10px; }
 
-.access{
+.access {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 25vh;
   text-decoration-color: blue;
-  font-weight:bold;
-  font-size: 15px;
-  
-}
+  font-weight: bold;
+  font-size: 15px; }
 
 .signupbutton {
-  padding:5vh;
-  flex-direction: column;
-}
+  padding: 5vh;
+  flex-direction: column; }
 
+.signupdeco {
+  font-style: oblique;
+  color: darkblue; }
 
-.signupdeco{
-font-style: oblique;
-color:darkblue;
+.redbutton {
+  padding: 5vh; }
 
-}
-
-.redbutton{
-  padding:5vh;
-}
+/*# sourceMappingURL=style.css.map */
