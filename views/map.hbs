@@ -13,9 +13,9 @@ mapboxgl.accessToken = 'pk.eyJ1IjoidHViYS1rYXNhcCIsImEiOiJjanh1ZTI0YXcwMDM4M2dtb
 var map = new mapboxgl.Map ({
 container: 'map',
 style: "mapbox://styles/tuba-kasap/cjxulodz50esc1cle1zrefz12",
-center: [13.413215, 52.521918],
-  zoom: 15.5,
-  pitch: 45
+center: [13.375739, 52.509352],
+  zoom: 14.5,
+  pitch: 47.5
 });
 </script>
 
@@ -25,7 +25,7 @@ center: [13.413215, 52.521918],
 
 
 
-<div>
+<div class="edupoints">
 <form action="/map" method="POST">
   <label for="name">name:</label>
   <input type="text" name="name">
@@ -35,7 +35,9 @@ center: [13.413215, 52.521918],
   <input type="number" step="0.0001" name="latitude">
   <label for="longitude">longitude:</label>
   <input type="number" step="0.0001" name="longitude">
-  <button>add wonder</button>
+  
+   <button  class="btn btn-danger" type="submit" method="get"> Add Edu.Point</button>
+   
 </form>
  
 </div>

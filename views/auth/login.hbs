@@ -1,0 +1,21 @@
+<form id="form" action="/login" method="POST" class="access">
+
+  <label for="username">Username</label><br />
+  <input type="text" name="username" />
+
+  <label for="password">Password</label><br />
+  <input type="password" name="password" />
+
+  {{#if errorMessage}}
+  <div class="error-message">{{errorMessage}}</div>
+  {{/if}}
+  <div class="signupbutton">
+  <button type="submit" class="btn btn-dark">Login</button>
+
+  </div>
+
+   <div>
+ <a href="/github">Login via github</a>
+
+    </div>
+</form>

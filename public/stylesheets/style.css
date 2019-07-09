@@ -36,7 +36,7 @@ a {
   flex-direction:row;
   justify-content: left;
 }
-li{
+.li{
   padding-left:20px;
   list-style-type:none;
   color:white;
@@ -52,4 +52,52 @@ li{
 a {
   text-decoration: none;
   
+}.nav-list2{
+
+  display:flex;
+  flex-direction:row;
+  justify-content: right;
+}
+
+.container-fluid2 {
+  display:flex;
+  justify-content: right;
+  align-items: center;
+  flex-direction:row;
+}
+
+
+.right {
+  padding-right:20px;
+  list-style-type:none;
+  color:white;
+}
+
+.edupoints{
+
+
+}
+
+.access{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  padding: 25vh;
+  text-decoration-color: blue;
+  font-weight:bold;
+  font-size: 15px;
+  
+}
+
+.signupbutton {
+  padding:5vh;
+  flex-direction: column;
+}
+
+
+.signupdeco{
+font-style: oblique;
+color:darkblue;
+
 }

@@ -36,7 +36,7 @@ router.post("/signup", (req, res) => {
   const { username, password } = req.body;
 
   if (!password || !username) {
-    res.render("./auth/signup", { errorMessage: "Both fields are required" });
+    res.render("./auth/signup", { errorMessage: "All three fields are required" });
 
     return;
   } else if (password.length < 8) {
