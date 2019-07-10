@@ -1,4 +1,38 @@
 
+<div>
+  
+  <div id='map'style='width: 100vw; height: 100vh;  margin:auto ;'></div>
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoidHViYS1rYXNhcCIsImEiOiJjanh1ZTI0YXcwMDM4M2dtbnZ6eXJuOGs2In0.L_TRnX4VuwoBAP4cSCFCVQ';
+var map = new mapboxgl.Map ({
+container: 'map',
+style: "mapbox://styles/tuba-kasap/cjxx7rd5r1cmz1cn8etlaf9v5",
+center: [13.375739, 52.509352],
+  zoom: 14.5,
+  pitch: 47.5
+});
+
+var geolocate = new mapboxgl.GeolocateControl({
+        positionOptions: {
+          enableHighAccuracy: true
+        },
+        trackUserLocation: true
+      });
+
+      map.addControl(geolocate);
+
+map.addControl(new MapboxDirections({
+accessToken: mapboxgl.accessToken
+}), 'top-left');
+
+map.addControl(new MapboxGeocoder({
+accessToken: mapboxgl.accessToken,
+mapboxgl: mapboxgl
+}));
+
+
+</script>
 <div class="homepart">
   <h1>{{title}}</h1>
 <p>Welcome to {{title}}</p>
@@ -8,6 +42,8 @@
 
   <button  class="btn btn-success" type="submit" method="get">Enter your trip. </button>
 </form>
+
+
 
 
 

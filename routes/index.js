@@ -1,6 +1,9 @@
 const express = require('express');
 const router = express.Router();
-
+var geo = require('mapbox-geocoding');
+const Place = require("../models/place")
+ 
+  geo.setAccessToken('pk.eyJ1IjoidHViYS1rYXNhcCIsImEiOiJjanh1ZTI0YXcwMDM4M2dtbnZ6eXJuOGs2In0.L_TRnX4VuwoBAP4cSCFCVQ');
 /* GET home page */
 router.get('/', (req, res, next) => {
   res.render('index');
@@ -9,17 +12,28 @@ router.get('/map', (req, res, next) => {
   res.render('map');
 });
 
-router.post('/map', (req, res, next) => {
-  const { name, latitude, longitude } = req.body
-
-  Place.create({
-    name, location: {
-      type: "Point",
-      coordinates: [latitude, longitude]
-    }
+router.get('/api/locations',(req,res,next)=>{
+  Place.find().then(place=>{
+    res.json(place)
   })
-    .then(data => { res.redirect('/') })
-    .catch(err => { console.log(err) })
+})
+
+router.post('/map', (req, res, next) => {
+  const { name, locations } = req.body
+
+  geo.geocode('mapbox.places', locations, function (err, geoData) {
+    console.log(geoData);
+     Place.create({
+      name, location: {
+        type: "Point",
+        coordinates: 
+        geoData.features[0].center
+      }
+    })
+      .then(data => { res.redirect('/secret') })
+      .catch(err => { console.log(err) }) 
+});
+
 });
 
 const loginCheck = () => {
