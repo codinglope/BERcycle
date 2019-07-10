@@ -13,8 +13,6 @@ center: [13.375739, 52.509352],
   pitch: 47.5
 });
 
-
-
 var geolocate = new mapboxgl.GeolocateControl({
         positionOptions: {
           enableHighAccuracy: true
@@ -23,9 +21,6 @@ var geolocate = new mapboxgl.GeolocateControl({
       });
 
       map.addControl(geolocate);
-
-
-
 
 map.addControl(new MapboxDirections({
 accessToken: mapboxgl.accessToken
