@@ -34,4 +34,16 @@ router.get("/secret", loginCheck(), (req, res) => {
   res.render("secret");
 });
 
+
+function start(){
+
+  document.getElementById("/").style.display="block";
+  document.getElementById("index").style.display="block";
+  document.getElementById("secret").style.display="none";
+
+  //document.getElementById("intro").style.display="none";
+  //document.getElementById("start-button").style.display="none";
+  //document.getElementById("h3").style.display="none";
+  //scrollSpeed = 2;
+}
 module.exports = router;

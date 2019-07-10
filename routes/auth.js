@@ -15,6 +15,8 @@ router.get(
   })
 );
  */
+
+ 
 router.get("/signup", (req, res) => {
   res.render("auth/signup");
 });
@@ -26,7 +28,7 @@ router.get("/login", (req, res) => {
 router.post(
   "/login",
   passport.authenticate("local", {
-    successRedirect: "/",
+    successRedirect: "/secret",
     failureRedirect: "/login",
     failureFlash: true
   })
@@ -73,7 +75,7 @@ router.post("/signup", (req, res) => {
 
 router.get("/logout", (req, res) => {
   req.logout();
-  res.redirect("/login");
+  res.redirect("/");
 });
 
 module.exports = router;
