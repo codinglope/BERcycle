@@ -11,7 +11,7 @@ const loginCheck = () => {
 
 router.use(loginCheck());
 
-router.get("/secret", loginCheck (req, res) => {
+router.get("/secret", loginCheck, (req, res) => {
   res.render("secret");
 });
 
