@@ -1,23 +1,62 @@
+$red: #E63946;
+$light-blue: #C7E7E8;
+$blue: #457B9D;
+$dark-blue: #1D3557;
+$grey: #313330;
+
+
 body {
   padding: auto;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+  font: 14px "Open Sans", Helvetica, Arial, sans-serif;
+}
 
 a {
-  color: #00B7FF; }
+  color: $blue;
+}
+
+label {
+  margin-bottom: 0;
+}
+
+.btn {
+  &-danger {
+    background-color: $red;
+  }
+  &-primary {
+    background-color: $blue;
+    border-color: $light-blue;
+    &:hover {
+      background-color: $blue;
+      border-color: $blue;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
 
 .nav-bar {
-  background-color:rgb(25, 33, 41);
-  color:white;
-  padding:auto;
-  height:40px;
+  background-color:$light-blue;
+  background-image: url(../images/bg.png);
+  background-size: cover;
+  color:$light-blue;
+  padding: 15px 15px 0px 15px;
+  height:60px;
   width:100vw;
   display:flex;
   justify-content: center;
   align-items: center;
-  
-
+  border-bottom: solid 5px $red;
+  a {
+    color: $red;
+    transition: 400ms;
+    &:hover {
+      color: $blue;
+      text-decoration: none;
+    }
+  }
 }
 
 
@@ -36,6 +75,7 @@ a {
   flex-direction:row;
   justify-content: left;
 }
+
 .li{
   padding-left:20px;
   list-style-type:none;
@@ -74,23 +114,46 @@ a {
 }
 
 .edupoints {
-  display: ruby-base-container;
   position: absolute;
-  width: 100px;
-  height: 40px;
+  width: 40px;
+  height: 38px;
+  background-color: black;
+  opacity: 0.9;
   z-index: 5;
-  top: 250px;
-  left: 25px;
+  top: 100px;
+  right: 25px;
   overflow: hidden;
   transition: 400ms;
-  border-radius: 10px;
+  border-radius: 5px;
+  text-align: right;
+  h4 {
+    color: $red;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  form {
+    padding: 15px;
+    color: white;
+    input {
+      margin: 15px;
+      height: 35px;
+      border-radius: 5px;
+      border: solid $grey 1px;
+      width: calc(100% - 30px);
+      &.datein {
+        width: calc(50% - 32px);
+      }
+    }
+    label {
+      display: none;
+    }
+  }
 }
 
   .edupoints.active {
-    width: 200px;
     height: 500px;
-    background-color: white;
-    padding: 30px;
+    width: 300px;
   }
 
 .access{
@@ -99,7 +162,7 @@ a {
   justify-content: center;
   align-items: center;
   padding: 25vh;
-  text-decoration-color: blue;
+  text-decoration-color: $blue;
   font-weight:bold;
   font-size: 15px;
   
@@ -117,21 +180,16 @@ color:darkblue;
 
 }
 
-.redbutton{
-  padding:5vh;
-}
-
 #geoholder{
   display: none;
 }
 
 .private{
  
-  background-color: rgb(57, 184, 235); 
-  padding:none;  
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: $light-blue; 
+  padding:none;
   text-decoration-color: aliceblue;
-  color:rgb(200, 41, 41); 
+  color:$red; 
   justify-content: center;
   align-items:center;
   display:flex;  
@@ -140,33 +198,23 @@ color:darkblue;
 }
 
 
-.home{
+.home {
   display: block;
   position: absolute;
-  width: 300px;
-  height: 300px;
   z-index: 5;
-   top: 100px; 
-  
   overflow: hidden;
   transition: 400ms;
-  border-radius: 10px;
-  text-decoration-color: aliceblue;
-  top: 50vh;
-  /* left: 50vw;
-  transform: translateX(-50%)
-  transform: translateY(-50%)  */
+  top: 50%;
+  left: 50%;
+  height: 300px;
+  width: 300px;
+  padding: 20px;
+  border-radius: 5px;
+  transform: translateX(-50%) translateY(-50%);
   justify-content: center;
   align-items:center;
-}
-
-.home.active{
-    width: 200px;
-    height: 500px;
-    background-color: white;
-    display:flex;
-    justify-content:center;
-    
+  background-image: url(../images/bg.png);
+  background-size: cover;
 }
 
 .title{
@@ -184,8 +232,10 @@ font-size: 25px;
 
 }
 
-.redbut{
-
+.redbutton{
+  width: 100%;
+  text-align: center;
+  padding: 15px;
 }
 
 
@@ -199,4 +249,20 @@ font-size: 25px;
 #add-place{
 
 
+}
+
+.mapboxgl-ctrl-geocoder input[type='text'] {
+  padding: 10px 40px 10px 30px;
+}
+
+.directions-icon-depart {
+  background-color: $blue;
+}
+
+.directions-icon-arrive {
+  background-color: $red;
+}
+
+div.mapboxgl-ctrl-geocoder.mapboxgl-ctrl {
+  margin: 15px;
 }

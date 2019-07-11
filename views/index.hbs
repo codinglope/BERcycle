@@ -1,13 +1,13 @@
 
 <div id="center2">
   
-  <div id='map'style='width: 100vw; height: 100vh;  margin:auto ;'></div>
+  <div id='map'style='width: 100vw; height: calc(100vh - 60px);  margin:auto ;'></div>
 
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoidHViYS1rYXNhcCIsImEiOiJjanh1ZTI0YXcwMDM4M2dtbnZ6eXJuOGs2In0.L_TRnX4VuwoBAP4cSCFCVQ';
 var map = new mapboxgl.Map ({
 container: 'map',
-style: "mapbox://styles/tuba-kasap/cjxx7rd5r1cmz1cn8etlaf9v5/draft",
+style: "mapbox://styles/tuba-kasap/cjxyyrvwr052p1crzfxpiu7iw/draft",
 center: [13.375739, 52.509352],
   zoom: 14.5,
   pitch: 47.5
@@ -22,22 +22,12 @@ mapboxgl: mapboxgl
 
 
 </script>
-<div class="home"onclick="$('.home').toggleClass('active');"  >
-  <h1 class="title">{{title}}</h1>
-<p class ="title">Welcome to {{title}}</p>
-
-<form action="/map" method="get">
 
 
-  <button  class="btn btn-danger" type="submit" method="get" class="redbut" >Enter your trip. </button>
-
-
-</form>
-
-
-
-
-
-</div>
-
-
+  <div class="home"  >
+    <h1 class="title">{{title}}</h1>
+    <p class ="title">Welcome to {{title}}</p>
+    <form action="/map" method="get">
+      <button  class="btn btn-danger" type="submit" method="get" class="redbut" >Enter your trip. </button>
+    </form>
+  </div>

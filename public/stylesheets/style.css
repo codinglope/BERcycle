@@ -1,20 +1,44 @@
 body {
   padding: auto;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+  font: 14px "Open Sans", Helvetica, Arial, sans-serif; }
 
 a {
-  color: #00B7FF; }
+  color: #457B9D; }
+
+label {
+  margin-bottom: 0; }
+
+.btn-danger {
+  background-color: #E63946; }
+
+.btn-primary {
+  background-color: #457B9D;
+  border-color: #C7E7E8; }
+  .btn-primary:hover {
+    background-color: #457B9D;
+    border-color: #457B9D; }
+  .btn-primary:focus {
+    box-shadow: none; }
 
 /*# sourceMappingURL=style.css.map */
 .nav-bar {
-  background-color: #192129;
-  color: white;
-  padding: auto;
-  height: 40px;
+  background-color: #C7E7E8;
+  background-image: url(../images/bg.png);
+  background-size: cover;
+  color: #C7E7E8;
+  padding: 15px 15px 0px 15px;
+  height: 60px;
   width: 100vw;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  border-bottom: solid 5px #E63946; }
+  .nav-bar a {
+    color: #E63946;
+    transition: 400ms; }
+    .nav-bar a:hover {
+      color: #457B9D;
+      text-decoration: none; }
 
 .homepart {
   display: flex;
@@ -58,22 +82,40 @@ a {
   color: white; }
 
 .edupoints {
-  display: ruby-base-container;
   position: absolute;
-  width: 100px;
-  height: 40px;
+  width: 40px;
+  height: 38px;
+  background-color: black;
+  opacity: 0.9;
   z-index: 5;
-  top: 250px;
-  left: 25px;
+  top: 100px;
+  right: 25px;
   overflow: hidden;
   transition: 400ms;
-  border-radius: 10px; }
+  border-radius: 5px;
+  text-align: right; }
+  .edupoints h4 {
+    color: #E63946;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 0; }
+  .edupoints form {
+    padding: 15px;
+    color: white; }
+    .edupoints form input {
+      margin: 15px;
+      height: 35px;
+      border-radius: 5px;
+      border: solid #313330 1px;
+      width: calc(100% - 30px); }
+      .edupoints form input.datein {
+        width: calc(50% - 32px); }
+    .edupoints form label {
+      display: none; }
 
 .edupoints.active {
-  width: 200px;
   height: 500px;
-  background-color: white;
-  padding: 30px; }
+  width: 300px; }
 
 .access {
   display: flex;
@@ -81,7 +123,7 @@ a {
   justify-content: center;
   align-items: center;
   padding: 25vh;
-  text-decoration-color: blue;
+  text-decoration-color: #457B9D;
   font-weight: bold;
   font-size: 15px; }
 
@@ -93,18 +135,14 @@ a {
   font-style: oblique;
   color: darkblue; }
 
-.redbutton {
-  padding: 5vh; }
-
 #geoholder {
   display: none; }
 
 .private {
-  background-color: #39b8eb;
+  background-color: #C7E7E8;
   padding: none;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-decoration-color: aliceblue;
-  color: #c82929;
+  color: #E63946;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -113,27 +151,20 @@ a {
 .home {
   display: block;
   position: absolute;
-  width: 300px;
-  height: 300px;
   z-index: 5;
-  top: 100px;
   overflow: hidden;
   transition: 400ms;
-  border-radius: 10px;
-  text-decoration-color: aliceblue;
-  top: 50vh;
-  /* left: 50vw;
-  transform: translateX(-50%)
-  transform: translateY(-50%)  */
+  top: 50%;
+  left: 50%;
+  height: 300px;
+  width: 300px;
+  padding: 20px;
+  border-radius: 5px;
+  transform: translateX(-50%) translateY(-50%);
   justify-content: center;
-  align-items: center; }
-
-.home.active {
-  width: 200px;
-  height: 500px;
-  background-color: white;
-  display: flex;
-  justify-content: center; }
+  align-items: center;
+  background-image: url(../images/bg.png);
+  background-size: cover; }
 
 .title {
   text-decoration-color: aliceblue; }
@@ -145,9 +176,25 @@ a {
   color: #ee3939;
   font-size: 25px; }
 
+.redbutton {
+  width: 100%;
+  text-align: center;
+  padding: 15px; }
+
 /* .searchline{
   justify-content: left;
   align-items: left;
 } */
+.mapboxgl-ctrl-geocoder input[type='text'] {
+  padding: 10px 40px 10px 30px; }
+
+.directions-icon-depart {
+  background-color: #457B9D; }
+
+.directions-icon-arrive {
+  background-color: #E63946; }
+
+div.mapboxgl-ctrl-geocoder.mapboxgl-ctrl {
+  margin: 15px; }
 
 /*# sourceMappingURL=style.css.map */
