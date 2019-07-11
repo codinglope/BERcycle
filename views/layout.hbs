@@ -19,7 +19,10 @@
 <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.0/mapbox-gl-directions.js'></script>
 <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.0/mapbox-gl-directions.css' type='text/css' />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js" ></script>
-// hier kommt zusätzliches 
+
+
+
+
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.0/mapbox-gl.js'></script>
 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.0/mapbox-gl.css' rel='stylesheet' />
 
@@ -68,7 +71,7 @@
    
     {{#if user}}
     <li class="right"><a href="/">Logout</a></li>
-    <li class="li"><a href="/secret">Add.Point</a></li>
+    {{!-- <li class="li"><a href="/secret">Add.Point</a></li> --}}
     {{else}}
     <li class="right"><a href="/signup">SignUp</a></li>
     <li class="right"><a href="/login">Login</a></li>

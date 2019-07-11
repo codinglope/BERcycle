@@ -26,10 +26,12 @@ map.addControl(new MapboxDirections({
 accessToken: mapboxgl.accessToken
 }), 'top-left');
 
-map.addControl(new MapboxGeocoder({
+{{!-- <div class="searchline"> --}}
+ map.addControl(new MapboxGeocoder({
 accessToken: mapboxgl.accessToken,
 mapboxgl: mapboxgl
-}));
+})); 
+
 
 
 </script>

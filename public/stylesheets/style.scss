@@ -74,12 +74,12 @@ a {
 }
 
 .edupoints {
-  display: block;
+  display: ruby-base-container;
   position: absolute;
-  width: 40px;
+  width: 100px;
   height: 40px;
   z-index: 5;
-  top: 100px;
+  top: 250px;
   left: 25px;
   overflow: hidden;
   transition: 400ms;
@@ -90,7 +90,7 @@ a {
     width: 200px;
     height: 500px;
     background-color: white;
-    padding: 10px;
+    padding: 30px;
   }
 
 .access{
@@ -123,4 +123,80 @@ color:darkblue;
 
 #geoholder{
   display: none;
+}
+
+.private{
+ 
+  background-color: rgb(57, 184, 235); 
+  padding:none;  
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-decoration-color: aliceblue;
+  color:rgb(200, 41, 41); 
+  justify-content: center;
+  align-items:center;
+  display:flex;  
+  width: 100vw;
+    
+}
+
+
+.home{
+  display: block;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  z-index: 5;
+   top: 100px; 
+  
+  overflow: hidden;
+  transition: 400ms;
+  border-radius: 10px;
+  text-decoration-color: aliceblue;
+  top: 50vh;
+  /* left: 50vw;
+  transform: translateX(-50%)
+  transform: translateY(-50%)  */
+  justify-content: center;
+  align-items:center;
+}
+
+.home.active{
+    width: 200px;
+    height: 500px;
+    background-color: white;
+    display:flex;
+    justify-content:center;
+    
+}
+
+.title{
+  text-decoration-color: aliceblue;
+}
+
+#center2{
+display:flex;
+justify-content: center;
+align-items: center;
+color:rgb(238, 57, 57);
+font-size: 25px;
+
+
+
+}
+
+.redbut{
+
+}
+
+
+/* .searchline{
+  justify-content: left;
+  align-items: left;
+} */
+
+
+
+#add-place{
+
+
 }
