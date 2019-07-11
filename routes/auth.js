@@ -25,6 +25,16 @@ router.get("/login", (req, res) => {
   res.render("auth/login", { errorMessage: req.flash("error") });
 });
 
+router.get("/github", passport.authenticate("github"));
+
+router.get(
+  "/github/callback",
+  passport.authenticate("github", {
+    successRedirect: "/",
+    failureRedirect: "/login"
+  })
+);
+
 router.post(
   "/login",
   passport.authenticate("local", {

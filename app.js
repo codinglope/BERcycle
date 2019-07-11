@@ -15,10 +15,8 @@ const GitHubStrategy = require("passport-github").Strategy;
 const bcrypt = require("bcrypt");
 const User = require("./models/User");
 const flash = require("connect-flash");
-
-
 mongoose
-  .connect('mongodb://localhost/bercycle', {useNewUrlParser: true})
+  .connect(process.env.MONGODB_URI || "mongodb://localhost/bercycle" , {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -79,12 +77,12 @@ passport.use(
   })
 );
 
-/* passport.use(
+ passport.use(
   new GitHubStrategy(
     {
       clientID: process.env.GITHUB_CLIENT_ID,
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
-      callbackURL: "http://localhost:7700/auth/github/callback"
+      callbackURL: "http://localhost:7200/auth/github/callback"
     },
     (accessToken, refreshToken, profile, done) => {
       User.findOne({ githubId: profile.id })
@@ -100,7 +98,7 @@ passport.use(
         });
     }
   )
-); */
+); 
 
 app.use(passport.initialize());
 app.use(passport.session());
