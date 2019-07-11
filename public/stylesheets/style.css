@@ -1,6 +1,8 @@
 body {
   padding: auto;
-  font: 14px "Open Sans", Helvetica, Arial, sans-serif; }
+  font: 14px "Open Sans", Helvetica, Arial, sans-serif;
+  background-image: url(../images/bg.png);
+  background-size: cover; }
 
 a {
   color: #457B9D; }
