@@ -13,7 +13,7 @@ center: [13.375739, 52.509352],
   pitch: 47.5
 });
 
-axios.get("http://localhost:7200/api/locations").then(response=>{
+axios.get("http://localhost:7300/api/locations").then(response=>{
    response.data.forEach(place=>{
        let popup = new mapboxgl.Popup({ offset: 0, className: 'my-class' })
         .setHTML(`<div class="popup">${place.name}</div>`)

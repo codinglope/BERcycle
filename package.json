@@ -1,6 +1,6 @@
 {
-  "name": "bercycle",
-  "version": "0.0.0",
+  "name": "node-example",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
@@ -13,7 +13,7 @@
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.3",
     "dotenv": "^6.0.0",
-    "express": "^4.16.3",
+    "express": "^4.17.1",
     "express-session": "^1.16.2",
     "flash": "^1.1.0",
     "hbs": "^4.0.1",
@@ -27,9 +27,27 @@
     "passport-github": "^1.1.0",
     "passport-local": "^1.0.0",
     "passport-oauth": "^1.0.0",
-    "serve-favicon": "^2.5.0"
+    "serve-favicon": "^2.5.0",
+    "start-script": "^0.1.0"
   },
   "devDependencies": {
     "nodemon": "^1.12.1"
-  }
+  },
+  "description": "This example is so cool",
+  "main": "web.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codinglope/BERcycle.git"
+  },
+  "keywords": [
+    "example",
+    "bercycle",
+    "heroku"
+  ],
+  "author": "Tuba Kasap",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codinglope/BERcycle/issues"
+  },
+  "homepage": "https://github.com/codinglope/BERcycle#readme"
 }
