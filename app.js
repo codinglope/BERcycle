@@ -13,7 +13,7 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const GitHubStrategy = require("passport-github").Strategy;
 const bcrypt = require("bcrypt");
-const User = require("./models/Users");
+const User = require("./models/User");
 const flash = require("connect-flash");
 mongoose
   .connect(process.env.MONGODB_URI || "mongodb://localhost/bercycle" , {useNewUrlParser: true})
